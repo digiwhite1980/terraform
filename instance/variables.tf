@@ -39,10 +39,6 @@ variable "associate_public_ip_address" {
 		default = false
 }
 
-variable "user_data"            {
-  default = ""
-}
-
 variable "user_data_base64"     {
   default = ""
 }
