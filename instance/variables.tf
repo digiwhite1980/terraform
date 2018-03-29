@@ -43,6 +43,10 @@ variable "user_data"            {
   default = ""
 }
 
+variable "user_data_base64"     {
+  default = ""
+}
+
 variable "instance_name"		    {}
 variable "private_ip"			      {
   default = ""

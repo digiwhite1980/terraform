@@ -35,6 +35,8 @@ resource "aws_instance" "instance" {
 
 	user_data							= "${var.user_data}"
 
+	user_data_base64			= "${var.user_data_base64}"
+
 	vpc_security_group_ids = [ "${var.security_groups_ids}" ]
 
 	key_name 							= "${var.ssh_name_key}"
