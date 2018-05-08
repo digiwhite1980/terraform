@@ -2,10 +2,6 @@ output "instance_name" {
 	value = "${var.instance_name}"
 }
 
-output "availability_zone" {
-	value = "${aws_spot_instance_request.instance.availability_zone}"
-}
-
 output "public_ip" {
   value = [
     "${aws_instance.instance.*.public_ip}"
