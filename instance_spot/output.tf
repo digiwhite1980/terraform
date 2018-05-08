@@ -4,36 +4,36 @@ output "instance_name" {
 
 output "public_ip" {
   value = [
-    "${aws_instance.instance.*.public_ip}"
+    "${aws_spot_instance_request.instance.*.public_ip}"
   ]
 }
 
 output "private_ip" {
   value = [
-    "${aws_instance.instance.*.private_ip}"
+    "${aws_spot_instance_request.instance.*.private_ip}"
   ]
 }
 
 output "public_dns" {
   value = [
-    "${aws_instance.instance.*.public_dns}"
+    "${aws_spot_instance_request.instance.*.public_dns}"
   ]
 }
 
 output "private_dns" {
   value = [
-    "${aws_instance.instance.*.private_dns}"
+    "${aws_spot_instance_request.instance.*.private_dns}"
   ]
 }
 
 output "id" {
   value = [
-    "${aws_instance.instance.*.id}"
+    "${aws_spot_instance_request.instance.*.id}"
   ]
 }
 
 output "availability_zone" {
   value = [ 
-    "${aws_instance.instance.*.availability_zone}"
+    "${aws_spot_instance_request.instance.*.availability_zone}"
   ]
 }
