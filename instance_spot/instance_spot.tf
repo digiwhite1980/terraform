@@ -8,7 +8,13 @@ resource "aws_spot_instance_request" "instance" {
 	spot_type							= "${var.spot_type}"
 	wait_for_fulfillment	= "${var.wait_for_fulfillment}"
 	
-	tags              		= "${var.tags}"
+	tags              		= "${merge(var.tags, 
+																		map(
+																				"Name", "${var.instance_name}",
+																				"Environment", "${var.environment}",
+																			))}"
+
+	count 								= "${var.count}"
 
 	root_block_device {
 		delete_on_termination		= "${var.root_block_device_delete}"
@@ -31,7 +37,7 @@ resource "aws_spot_instance_request" "instance" {
 
 	iam_instance_profile	= "${var.iam_instance_profile}"
 
-	user_data							 = "${var.user_data}"
+	user_data_base64			= "${var.user_data_base64}"
 
 	vpc_security_group_ids = [ "${var.security_groups_ids}" ]
 

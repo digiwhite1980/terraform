@@ -43,7 +43,7 @@ variable "associate_public_ip_address" {
 		default = false
 }
 
-variable "user_data"            {}
+variable "user_data_base64"     {}
 
 variable "instance_name"		    {}
 variable "private_ip"			      {}
