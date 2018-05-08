@@ -50,7 +50,10 @@ variable "associate_public_ip_address" {
 variable "user_data_base64"     {}
 
 variable "instance_name"		    {}
-variable "private_ip"			      {}
+
+variable "private_ip"           {
+  default = ""
+}
 
 variable "connection_agent"     {
 	default = false
