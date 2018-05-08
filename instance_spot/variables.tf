@@ -35,6 +35,10 @@ variable "root_block_device_delete" {
 }
 ####################################
 
+variable "count" {
+  default = "1"
+}
+
 variable "region" 				      {}
 variable "aws_ami" 				      {}
 variable "aws_instance_type" 	  {}
