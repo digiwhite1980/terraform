@@ -3,10 +3,6 @@ resource "aws_spot_instance_request" "instance" {
 	instance_type 				= "${var.aws_instance_type}"
 	subnet_id 						= "${var.aws_subnet_id}"
 	private_ip 						= "${var.private_ip}"
-
-	spot_price						= "${var.spot_price}"
-	spot_type							= "${var.spot_type}"
-	wait_for_fulfillment	= "${var.wait_for_fulfillment}"
 	
 	tags              		= "${merge(var.tags, 
 																		map(
@@ -15,6 +11,10 @@ resource "aws_spot_instance_request" "instance" {
 																			))}"
 
 	count 								= "${var.count}"
+	
+	spot_price						= "${var.spot_price}"
+	spot_type							= "${var.spot_type}"
+	wait_for_fulfillment	= "${var.wait_for_fulfillment}"
 
 	root_block_device {
 		delete_on_termination		= "${var.root_block_device_delete}"
