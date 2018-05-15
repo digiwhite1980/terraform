@@ -4,7 +4,11 @@ resource "aws_spot_instance_request" "instance" {
 	subnet_id 						= "${var.aws_subnet_id}"
 	private_ip 						= "${var.private_ip}"
 	
-	tags              		= "${var.tags}"
+	tags              		= "${merge(var.tags, 
+																		map(
+																				"Name", "${var.instance_name}",
+																				"Environment", "${var.environment}",
+																			))}"
 
 	count 								= "${var.count}"
 	

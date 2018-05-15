@@ -64,5 +64,6 @@ variable "iam_instance_profile" {
 }
 
 variable "tags" {
+  default = {}
   type = "map"
 }
