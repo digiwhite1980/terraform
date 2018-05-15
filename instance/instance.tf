@@ -37,7 +37,7 @@ resource "aws_instance" "instance" {
 
 	vpc_security_group_ids = [ "${var.security_groups_ids}" ]
 
-	key_name 							= "${var.ssh_name_key}"
+	key_name 							 = "${var.ssh_name_key}"
 
 	associate_public_ip_address = "${var.associate_public_ip_address}"
 }

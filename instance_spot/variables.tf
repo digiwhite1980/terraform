@@ -1,14 +1,6 @@
 variable "environment"			    {}
 variable "aws_subnet_id"		    {}
 
-variable "spot_price"           {}
-variable "spot_type"            {
-  default = "persistent"
-}
-variable "wait_for_fulfillment" {
-  default = false
-}
-
 variable "availability_zone"	  {}
 
 variable "ssh_user"				      {}
@@ -17,6 +9,10 @@ variable "ssh_pri_key"			    {}
 
 variable "security_groups_ids"	{
 	type = "list"
+}
+
+variable "count" {
+  default = "1"
 }
 
 ####################################
@@ -35,19 +31,17 @@ variable "root_block_device_delete" {
 }
 ####################################
 
-variable "count" {
-  default = "1"
-}
-
 variable "region" 				      {}
 variable "aws_ami" 				      {}
 variable "aws_instance_type" 	  {}
 
 variable "associate_public_ip_address" {
-		default = false
+	default = false
 }
 
-variable "user_data_base64"     {}
+variable "user_data_base64"     {
+  default = ""
+}
 
 variable "instance_name"		    {}
 
@@ -64,6 +58,14 @@ variable "iam_instance_profile" {
 }
 
 variable "tags" {
-  default = {}
   type = "map"
+  default = {}
+}
+
+variable "spot_price"           {}
+variable "spot_type"            {
+  default = "persistent"
+}
+variable "wait_for_fulfillment" {
+  default = false
 }

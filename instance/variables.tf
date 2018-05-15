@@ -36,7 +36,7 @@ variable "aws_ami" 				      {}
 variable "aws_instance_type" 	  {}
 
 variable "associate_public_ip_address" {
-		default = false
+	default = false
 }
 
 variable "user_data_base64"     {
@@ -44,6 +44,7 @@ variable "user_data_base64"     {
 }
 
 variable "instance_name"		    {}
+
 variable "private_ip"			      {
   default = ""
 }
