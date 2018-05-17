@@ -4,7 +4,7 @@ variable "spot_price"                   {}
 variable "name_prefix"                  {}
 variable "iam_instance_profile"         {}
 
-variable "user_data_base64"             {}
+variable "user_data                     {}
 
 variable "key_name"                     {}
 variable "security_groups"              {
