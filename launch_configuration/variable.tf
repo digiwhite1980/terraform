@@ -8,6 +8,10 @@ variable "user_data_base64"             {
   default = ""
 }
 
+variable "user_data"                    {
+  default = ""
+}
+
 variable "key_name"                     {}
 variable "security_groups"              {
   type = "list"
