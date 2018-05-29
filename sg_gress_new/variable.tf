@@ -1,4 +1,5 @@
 variable "aws_vpc_id"	       {}
+variable "environment" 			 {}
 
 variable "sg_name"		       {}
 
