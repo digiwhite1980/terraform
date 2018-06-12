@@ -1,6 +1,8 @@
 variable "instance_type"                {}
 variable "image_id"                     {}
-variable "spot_price"                   {}
+variable "spot_price"                   {
+  default = ""
+}
 variable "name_prefix"                  {}
 variable "iam_instance_profile"         {}
 
