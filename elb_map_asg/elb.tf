@@ -22,4 +22,8 @@ resource "aws_elb" "elb" {
 	connection_draining_timeout	= "${var.lb_connection_draining_timeout}"
 	cross_zone_load_balancing		= "${var.lb_cross_zone_load_balancing}"
 	connection_draining					= "${var.lb_connection_draining}"
+
+	lifecycle {
+		ignore_changes = 				[ "instances" ]
+	}
 }
