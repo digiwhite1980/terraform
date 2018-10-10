@@ -1,6 +1,6 @@
 resource "aws_route_table" "route" {
     vpc_id 		        = "${var.vpc_id}"
-    count               = "${length(var.gateway_id)}"
+    count               = "${var.count}"
 
     route {
         cidr_block 	    = "${var.cidr_block}"
