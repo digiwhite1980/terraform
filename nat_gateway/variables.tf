@@ -16,8 +16,3 @@ variable "name"                 {
 variable "count" {
   default = 1
 }
-
-#variable "depends_on"	{
-#	type = "list"
-#	default = [ "" ]
-#}
