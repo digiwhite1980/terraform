@@ -16,3 +16,8 @@ variable "availability_zone"		{
 variable "map_public_ip"	      { 
 	default = false
 }
+
+variable "tags" {
+  type = "map"
+  default = {}
+}

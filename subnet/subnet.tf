@@ -6,9 +6,10 @@ resource "aws_subnet" "subnet" {
 
     map_public_ip_on_launch = "${var.map_public_ip}"
 
-    tags {
-        Name				= "${var.name} ${element(var.availability_zone, count.index)} ${var.project} ${var.environment}"
-        Environment			= "${var.environment}"
-        AVZ                 = "${element(var.availability_zone, count.index)}"
-    }
+    tags                    = "${merge(var.tags,
+                                    map(
+   				      "Name", "${var.name} - ${var.environment} - ${element(var.availability_zone, count.index)}",
+                                      "Environment", "${var.environment}",
+        			      "AVZ", "${element(var.availability_zone, count.index)}"
+                            ))}"
 }
