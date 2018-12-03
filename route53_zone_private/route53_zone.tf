@@ -1,7 +1,7 @@
 resource "aws_route53_zone" "route53" {
   name           = "${var.domain_name}"
 
-  vpc_id         = "${var.vpc_id}"
+  vpc         = "${var.vpc_id}"
   
   force_destroy  = "${var.force_destroy}"
 
