@@ -4,7 +4,7 @@ resource "aws_vpc_dhcp_options" "dhcp_options" {
     ntp_servers 		= ["91.189.89.198", "91.189.94.4"]
 
     tags {
-        Name 			= "${var.project}_${var.environment}"
+        Name 			= "${var.project}"
         Environment 	= "${var.environment}"
     }
 }
