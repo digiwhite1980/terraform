@@ -57,7 +57,7 @@ variable "internal" {
 }
 
 variable "maintenance_window" {
-	default = "03:00 05:00"
+	default = "Sun:03:00-Sun:05:00"
 }
 
 variable "tags" 									{
