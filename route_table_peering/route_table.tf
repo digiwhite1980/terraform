@@ -1,4 +1,4 @@
-resource "aws_route_table" "route_peering" {
+resource "aws_route_table" "route" {
     vpc_id 			= "${var.vpc_id}"
     route {
         cidr_block 						= "${var.cidr_block}"
