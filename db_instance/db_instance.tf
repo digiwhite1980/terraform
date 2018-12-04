@@ -21,5 +21,5 @@ resource "aws_db_instance" "db" {
 
 	preferred_maintenance_window = "${var.preferred_maintenance_window}"
 
-	tags "${merge(var.tags, map("Name", "${var.name}"))}"
+	tags 							= "${merge(var.tags, map("Name", "${var.name}"))}"
 }
