@@ -8,7 +8,8 @@ resource "aws_subnet" "subnet" {
 
     tags                    = "${merge(var.tags,
                                     map(
-   				      "Name", "${var.name} - ${var.environment} - ${element(var.availability_zone, count.index)}",
+							"Name", "${var.project}",
+   				      "Description", "${var.name} - ${var.environment} - ${element(var.availability_zone, count.index)}",
                                       "Environment", "${var.environment}",
         			      "AVZ", "${element(var.availability_zone, count.index)}"
                             ))}"
