@@ -48,8 +48,6 @@ variable "db_subnet_group_name" 	{
 	default = "mydb"
 }
 
-variable "project"								{}
-variable "environment"						{}
 variable "db_vpc_security_group_ids" {
 	type = "list"
 }
