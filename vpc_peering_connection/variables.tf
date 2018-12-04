@@ -7,6 +7,10 @@ variable "auto_accept"			{
 	default = "true"
 }
 
+variable "allow_remote_vpc_dns_resolution" {
+	default = "true"
+}
+
 variable "tags"					{
 	type = "map"
 	default = {}

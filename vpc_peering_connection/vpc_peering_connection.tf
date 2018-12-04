@@ -7,5 +7,13 @@ resource "aws_vpc_peering_connection" "vpc_peering" {
 	vpc_id					= "${var.vpc_id}"
 	auto_accept 			= "${var.auto_accept}"
 
+	accepter {
+		allow_remote_vpc_dns_resolution = "${var.allow_remote_vpc_dns_resolution}"
+	}
+
+	requester {
+		allow_remote_vpc_dns_resolution = "${var.allow_remote_vpc_dns_resolution}"
+	}
+
 	tags                 = "${merge(var.tags, map("Peer ID", "${var.peer_vpc_id}"))}"
 }
