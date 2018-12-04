@@ -4,7 +4,8 @@ resource "aws_db_subnet_group" "db_subnet_group" {
 	subnet_ids		= [ "${var.db_subnet_ids}"]
 
 	tags {
-		Name 		    = "${var.project}_${var.environment}_${var.db_name}"
+		Name 		    = "${var.project}"
+		Database 	 = "${var.db_name}"
 		Environment = "${var.environment}"
 	}
 }
