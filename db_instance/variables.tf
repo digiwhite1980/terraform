@@ -63,5 +63,6 @@ variable "preferred_maintenance_window" {
 }
 
 variable "tags" 									{
+   type = "map"
 	default = {}
 }
