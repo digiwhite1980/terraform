@@ -10,4 +10,6 @@ variable "force_destroy" {
   default = true
 }
 
-variable "vpc_id"       {}
+variable "vpc_id"       {
+	type = "list"
+}
