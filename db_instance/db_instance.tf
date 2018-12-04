@@ -19,5 +19,7 @@ resource "aws_db_instance" "db" {
 
 	db_subnet_group_name		= "${var.db_subnet_group_name}"
  
+	maintenance_window			= "${var.maintenance_window}"
+
 	tags 							= "${merge(var.tags, map("Name", "${var.db_name}"))}"
 }

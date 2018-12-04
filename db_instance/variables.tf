@@ -56,6 +56,10 @@ variable "internal" {
 	default = false
 }
 
+variable "maintenance_window" {
+	default = "03:00 05:00"
+}
+
 variable "tags" 									{
    type = "map"
 	default = {}
