@@ -6,10 +6,6 @@ output "db_address" {
 	value = "${aws_db_instance.db.address}"
 }
 
-output "db_availabiltizone" {
-	value = "${aws_db_instance.db.availabilityzone}"
-}
-
 output "db_endpoint" {
 	value = "${aws_db_instance.db.endpoint}"
 }
