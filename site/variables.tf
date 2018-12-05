@@ -41,3 +41,8 @@ variable "aws_ami" {
 		eu-central-1 	= "ami-f9dd458a"
 	}
 }
+
+variable "tags" {
+	type = "map"
+	default = {}
+}
