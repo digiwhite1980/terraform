@@ -7,5 +7,6 @@ resource "aws_subnet" "subnet" {
     map_public_ip_on_launch = "${var.map_public_ip}"
 
     tags                    = "${merge(var.tags,
-                                    map("CIDR", "${lookup(var.cidr_block, "avz.${count.index}")}"))}"
+                                    map("CIDR", "${lookup(var.cidr_block, "avz.${count.index}")}",
+													 "AVZ", "${element(var.availability_zone, count.index)}"))}"
 }
