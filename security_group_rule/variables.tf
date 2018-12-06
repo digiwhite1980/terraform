@@ -1,7 +1,8 @@
 valiable "type" 				{}
+
 variable "cidr_blocks"		{
 	type = "list"
-	default []
+	default = []
 }
 
 varaible "description" 		{
