@@ -1,19 +1,19 @@
-valiable "type" 				{}
+variable "type" 				{}
 
 variable "cidr_blocks"		{
 	type = "list"
 	default = []
 }
 
-varaible "description" 		{
+variable "description" 		{
 	deault = "Security group rule"
 }
 
-varaible "from_port" 		{
+variable "from_port" 		{
 	default = "0"
 }
 
-varaible "to_port"			{
+variable "to_port"			{
 	default = "65535"
 }
 
@@ -21,4 +21,4 @@ variable "protocol"			{
 	default = "all"
 }
 
-varaible "security_group_id" {}
+variable "security_group_id" {}
