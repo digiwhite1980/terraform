@@ -1,5 +1,7 @@
 resource "aws_security_group_rule" "security_group_rule" {
 
+	type 						= "${var.type}"
+
 	cidr_blocks				= [ "${var.cidr_blocks}" ]
 	description				= "${var.description}"
 	
