@@ -6,7 +6,7 @@ variable "cidr_blocks"		{
 }
 
 variable "description" 		{
-	deault = "Security group rule"
+	default = "Security group rule"
 }
 
 variable "from_port" 		{
