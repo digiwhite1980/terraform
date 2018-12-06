@@ -1,7 +1,7 @@
 variable "name" 		{}
 variable "role_arn"	{}
 
-varaible "version"	{
+variable "version"	{
 	default = ""
  }
 
