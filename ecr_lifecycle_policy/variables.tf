@@ -1,4 +1,2 @@
 variable "repository"	{}
-variable "policy"		{
-	default = {}
-}
+variable "policy"			{}
