@@ -1,4 +1,4 @@
 variable "repository"	{}
-variable "document"		{
+variable "policy"		{
 	default = {}
 }
