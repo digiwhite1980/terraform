@@ -16,6 +16,6 @@ variable "tags" {
 }
 
 variable "server_side_encryption_configuration" {
-  type = "map"
-  default = {}
+  type = "list"
+  default = []
 }
