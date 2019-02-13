@@ -1,4 +1,7 @@
 variable "vpc_id"		   {}
+variable "count" {
+  default = 1
+}
 # variable "cidr_block"		{}
 # variable "gateway_id"		{}
 
