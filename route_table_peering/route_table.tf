@@ -4,11 +4,11 @@ resource "aws_route_table" "route" {
 
     route {
         cidr_block                = "${var.cidr_block}"
-        vpc_peering_connection_id = "${element(var.gateway_id, count.index)}"
+        vpc_peering_connection_id = "${element(var.vpc_peering_connection_id, count.index)}"
     }
 
     tags {
-        Name        = "${var.name} ${element(var.gateway_id, count.index)} ${var.project} ${var.environment}"
+        Name        = "${var.name} ${element(var.vpc_peering_connection_id, count.index)} ${var.project} ${var.environment}"
         Environment     = "${var.environment}"
     }
 }
