@@ -15,6 +15,10 @@ variable "tags" {
   default = {}
 }
 
+variable "versioning"     {
+  default = false
+}
+
 variable "server_side_encryption_configuration" {
   type = "list"
   default = []

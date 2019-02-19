@@ -8,5 +8,9 @@ resource "aws_s3_bucket" "s3_options" {
 
   tags          = "${var.tags}"
 
+  versioning    {
+    enabled     = "${var.versioning}"
+  }
+
   server_side_encryption_configuration = "${var.server_side_encryption_configuration}"
 }
