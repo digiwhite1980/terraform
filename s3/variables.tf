@@ -5,6 +5,10 @@ variable "s3_acl"			   {
   default = "private"
 }
 
+variable "versioning"     {
+  default = false
+}
+
 variable "s3_policy"		 {}
 
 variable "bucket"			   {}

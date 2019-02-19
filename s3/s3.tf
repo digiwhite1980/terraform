@@ -6,6 +6,10 @@ resource "aws_s3_bucket" "s3" {
 
   force_destroy = "${var.force_destroy}"
 
+  versioning    {
+    enabled     = "${var.versioning}"
+  }
+
 	tags {
 		Name 		    = "${var.project}_${var.environment}"
 		Environment	= "${var.environment}"
