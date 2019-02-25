@@ -1,10 +1,5 @@
 variable "type" 				{}
 
-variable "cidr_blocks"		{
-	type = "list"
-	default = []
-}
-
 variable "description" 		{
 	default = "Security group rule"
 }
@@ -22,3 +17,7 @@ variable "protocol"			{
 }
 
 variable "security_group_id" {}
+
+variable "source_security_group_id" {
+	default = ""
+}
