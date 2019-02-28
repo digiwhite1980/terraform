@@ -8,4 +8,6 @@ resource "aws_eks_cluster" "eks" {
 		security_group_ids	= [ "${var.security_group_ids}" ]
 		subnet_ids 				= [ "${var.subnet_ids}" ]
 	}
+
+	depends_on [ "${var.depends_on}" ]
 }
