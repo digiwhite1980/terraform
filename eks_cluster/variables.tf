@@ -14,8 +14,3 @@ variable "subnet_ids" {
 	type = "list"
 	default = []
 }
-
-variable "depend_on" {
-	type = "list"
-	default = []
-}
