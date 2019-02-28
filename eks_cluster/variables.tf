@@ -14,3 +14,9 @@ variable "subnet_ids" {
 	type = "list"
 	default = []
 }
+
+# Dumy var we created to make sure EKS waits for role bindings to finish
+variable "role_dependencies" {
+	type = "list"
+	default = []
+}
