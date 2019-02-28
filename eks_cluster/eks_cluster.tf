@@ -9,5 +9,5 @@ resource "aws_eks_cluster" "eks" {
 		subnet_ids 				= [ "${var.subnet_ids}" ]
 	}
 
-	depends_on [ "${var.depends_on}" ]
+	depends_on  = [ "${var.depends_on}" ]
 }
